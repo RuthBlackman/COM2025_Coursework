@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: Module Selection
+  app_description: A place where you can select your modules!
+
+  home:
+    home:
+      title: Module Selection
+      welcome: Welcome to the module selection app!
