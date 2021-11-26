@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @course_module.Title
+%p
+  %b Modulecode:
+  = @course_module.ModuleCode
+%p
+  %b Moduleoverview:
+  = @course_module.ModuleOverview
+%p
+  %b Moduleleader:
+  = @course_module.ModuleLeader
+%p
+  %b Moduleleaderid:
+  = @course_module.ModuleLeaderID
+%p
+  %b Credits:
+  = @course_module.Credits
+%p
+  %b Year:
+  = @course_module.Year
+
+= link_to 'Edit', edit_course_module_path(@course_module)
+\|
+= link_to 'Back', course_modules_path

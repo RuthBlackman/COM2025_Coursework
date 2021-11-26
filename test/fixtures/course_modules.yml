@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Title: MyString
+  ModuleCode: MyString
+  ModuleOverview: MyText
+  ModuleLeader: MyString
+  ModuleLeaderID: 1
+  Credits: 
+  Year: 
+
+two:
+  Title: MyString
+  ModuleCode: MyString
+  ModuleOverview: MyText
+  ModuleLeader: MyString
+  ModuleLeaderID: 1
+  Credits: 
+  Year: 

@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+example1 = CourseModule.create(Title: 'title', ModuleCode: 'COM1234', ModuleOverview: 'Some text', ModuleLeader: 'a person', ModuleLeaderID: 2, Credits: 45, Year: 1)

@@ -1,0 +1,31 @@
+= form_for @course_module do |f|
+  - if @course_module.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@course_module.errors.count, "error")} prohibited this course_module from being saved:"
+      %ul
+        - @course_module.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :Title
+    = f.text_field :Title
+  .field
+    = f.label :ModuleCode
+    = f.text_field :ModuleCode
+  .field
+    = f.label :ModuleOverview
+    = f.text_area :ModuleOverview
+  .field
+    = f.label :ModuleLeader
+    = f.text_field :ModuleLeader
+  .field
+    = f.label :ModuleLeaderID
+    = f.number_field :ModuleLeaderID
+  .field
+    = f.label :Credits
+    = f.text_field :Credits
+  .field
+    = f.label :Year
+    = f.text_field :Year
+  .actions
+    = f.submit 'Save'
