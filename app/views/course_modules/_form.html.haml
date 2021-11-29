@@ -14,7 +14,7 @@
     = f.text_field :ModuleCode, size: 39, class: 'name formEntry'
   .field
     = f.label :ModuleOverview
-    = f.text_area :ModuleOverview, size: 39, class: 'message formEntry'
+    = f.text_field :ModuleOverview, size: 39, class: 'message formEntry'
   .field
     = f.label :ModuleLeader
     = f.text_field :ModuleLeader, size: 39, class: 'name formEntry'
@@ -28,4 +28,4 @@
     = f.label :Year
     = f.number_field :Year, size: 39, class: 'name formEntry'
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', class: 'btn'
