@@ -6,14 +6,14 @@ one:
   ModuleOverview: MyText
   ModuleLeader: MyString
   ModuleLeaderID: 1
-  Credits: 
-  Year: 
+  Credits: 1
+  Year: 1
 
 two:
-  Title: MyString
-  ModuleCode: MyString
-  ModuleOverview: MyText
-  ModuleLeader: MyString
+  Title: MyString2
+  ModuleCode: MyString2
+  ModuleOverview: MyText2
+  ModuleLeader: MyString2
   ModuleLeaderID: 1
-  Credits: 
-  Year: 
+  Credits: 1
+  Year: 1

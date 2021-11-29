@@ -13,11 +13,11 @@
 
 
 
-= form_tag request_contact_path, method: 'post' do
+= form_tag request_contact_path, method: 'post', class: 'contact_form' do
   = label_tag :name, t('.name')
-  = text_field_tag :name, '', title: t('.enter_name'), size: 50
+  = text_field_tag :name, '', title: t('.enter_name'), size: 39, class: 'name formEntry'
   = label_tag :email, t('.email')
-  = email_field_tag :email, '', title: t('.enter_email')
+  = email_field_tag :email, '', title: t('.enter_email'), size: 39, class: 'email formEntry'
   = label_tag :message, t('.message')
-  = text_field_tag :message, '', title: t('.enter_message'), size: 100
+  = text_field_tag :message, '', title: t('.enter_message'), size: 39, class: 'message formEntry'
   = submit_tag t('.submit')

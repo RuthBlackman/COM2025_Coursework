@@ -17,7 +17,7 @@ class CourseModulesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create course_module" do
     assert_difference('CourseModule.count') do
-      post course_modules_url, params: { course_module: { Credits: @course_module.Credits, ModuleCode: @course_module.ModuleCode, ModuleLeader: @course_module.ModuleLeader, ModuleLeaderID: @course_module.ModuleLeaderID, ModuleOverview: @course_module.ModuleOverview, Title: @course_module.Title, Year: @course_module.Year } }
+      post course_modules_url, params: { course_module: { Credits: @course_module.Credits, ModuleCode: @course_module.ModuleCode, ModuleLeader: @course_module.ModuleLeader, ModuleLeaderID: @course_module.ModuleLeaderID, ModuleOverview: @course_module.ModuleOverview, Title: "Test" , Year: @course_module.Year } }
     end
 
     assert_redirected_to course_module_url(CourseModule.last)
