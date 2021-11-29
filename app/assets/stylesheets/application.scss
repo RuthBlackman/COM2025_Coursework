@@ -21,7 +21,7 @@ $font: 'New Times Roman', 'Times', serif;
 $color: #23ccff;
 
 /* form animation starts */
-.contact_form {
+.contact_form, .edit_module_form{
   background: #fff;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
   border-radius: 5px;
@@ -43,7 +43,7 @@ $color: #23ccff;
 
 .name {
   background-color: #ebebeb;
-  color: white;
+  color: black;
 }
 .name:hover {
   border-bottom: 5px solid #0e3721;

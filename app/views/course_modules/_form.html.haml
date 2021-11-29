@@ -1,4 +1,4 @@
-= form_for @course_module do |f|
+= form_for @course_module, :html => { :id => "editModForm", :class => 'edit_module_form'} do |f|
   - if @course_module.errors.any?
     #error_explanation
       %h2= "#{pluralize(@course_module.errors.count, "error")} prohibited this course_module from being saved:"
@@ -8,24 +8,24 @@
 
   .field
     = f.label :Title
-    = f.text_field :Title
+    = f.text_field :Title, size: 39, class: 'name formEntry'
   .field
     = f.label :ModuleCode
-    = f.text_field :ModuleCode
+    = f.text_field :ModuleCode, size: 39, class: 'name formEntry'
   .field
     = f.label :ModuleOverview
-    = f.text_area :ModuleOverview
+    = f.text_area :ModuleOverview, size: 39, class: 'message formEntry'
   .field
     = f.label :ModuleLeader
-    = f.text_field :ModuleLeader
+    = f.text_field :ModuleLeader, size: 39, class: 'name formEntry'
   .field
     = f.label :ModuleLeaderID
-    = f.number_field :ModuleLeaderID
+    = f.number_field :ModuleLeaderID, size: 39, class: 'name formEntry'
   .field
     = f.label :Credits
-    = f.text_field :Credits
+    = f.number_field :Credits, size: 39, class: 'name formEntry'
   .field
     = f.label :Year
-    = f.text_field :Year
+    = f.number_field :Year, size: 39, class: 'name formEntry'
   .actions
     = f.submit 'Save'
