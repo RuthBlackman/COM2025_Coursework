@@ -1,4 +1,5 @@
-%h1 All Modules
+.jumbotron.text-center
+  %h1= 'All Modules'
 
 .ripple-background
   .circle.xxlarge.shade1
@@ -6,6 +7,7 @@
   .circle.large.shade3
   .circle.medium.shade4
   .circle.small.shade5
+
 
 %table
   %thead
@@ -35,4 +37,4 @@
 
 %br
 
-= link_to 'New Course module', new_course_module_path
+= link_to 'New Course module', new_course_module_path, class: 'btn'
