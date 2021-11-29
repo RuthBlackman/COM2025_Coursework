@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :course_modules
   root 'home#home'
   get 'response' , to: 'home#responsive'
