@@ -16,11 +16,18 @@ CSS for the show and back buttons
   cursor:pointer;
   color:#3a8a9e;
   font-family:Arial;
-  font-size:28px;
-  padding:70px 70px;
+  font-size:20px;
+  //padding:70px 70px;
   text-decoration:none;
   text-shadow:0px 1px 0px #e1e2ed;
   float: right;
+}
+
+.login_form{
+  .btn{
+    margin: auto;
+    padding: 0;
+  }
 }
 .btn:hover {
   background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);

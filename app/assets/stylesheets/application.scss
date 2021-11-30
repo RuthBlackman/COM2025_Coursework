@@ -18,12 +18,14 @@
 @import "bootstrap";
 
 @import "colours";
+//@import "deviseStyles";
+@import "course_modules";
 
 $font: 'New Times Roman', 'Times', serif;
 $color: #23ccff;
 
 /* form animation starts */
-.contact_form, .edit_module_form{
+.contact_form, .edit_module_form, .login_form, .signup_form, .forgot_password_form{
   background: #fff;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
   border-radius: 5px;
@@ -41,6 +43,31 @@ $color: #23ccff;
 }
 ::-webkit-input-placeholder {
   font-size: 1.3em;
+}
+
+.formWrapper{
+  background: #fff;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-top: 5px solid #0e3721;
+  /*   z-index: 1; */
+  animation: bounce 1.5s infinite;
+}
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.cancelAccountWrapper{
+  position:relative;
+  margin-top: 15%;
 }
 
 .name {
