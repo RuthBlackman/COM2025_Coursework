@@ -1,5 +1,6 @@
 .jumbotron.text-center
   %h1= 'Your Modules'
+  %p= 'Here are your selected modules!'
 
 .ripple-background
   .circle.xxlarge.shade1
@@ -32,9 +33,9 @@
         %td= course_module.Credits
         %td= course_module.Year
         %td= link_to 'Show', course_module
-        %td= link_to 'Edit', edit_course_module_path(course_module)
-        %td= link_to 'Destroy', course_module, method: :delete, data: { confirm: 'Are you sure?' }
+        //%td= link_to 'Edit', edit_course_module_path(course_module)
+        %td= link_to 'Destroy', selected_module_path(course_module.id), method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
-= link_to 'New Course module', new_course_module_path, class: 'btn'
+//= link_to 'Add a module', new_course_module_path, class: 'btn'

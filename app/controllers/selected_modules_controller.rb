@@ -1,5 +1,5 @@
 class SelectedModulesController < ApplicationController
-  before_action :set_selected_module, only: %i[ show edit update destroy ]
+  before_action :set_selected_module, only: %i[ show edit update  ]
 
   # GET /selected_modules or /selected_modules.json
   def index
@@ -13,6 +13,8 @@ class SelectedModulesController < ApplicationController
   # GET /selected_modules/new
   def new
     @selected_module = SelectedModule.new
+    @selected_module.user = current_user
+    @selected_module.course_module_id = params[:module_id]
   end
 
   # GET /selected_modules/1/edit
@@ -49,9 +51,12 @@ class SelectedModulesController < ApplicationController
 
   # DELETE /selected_modules/1 or /selected_modules/1.json
   def destroy
+
+    @selected_module = SelectedModule.where(["course_module_id = ? AND user_id = ?", params[:id], current_user.id ]).first!
+
     @selected_module.destroy
     respond_to do |format|
-      format.html { redirect_to selected_modules_url, notice: "Selected module was successfully destroyed." }
+      format.html { redirect_to my_modules_path, notice: "Selected module was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -64,6 +69,6 @@ class SelectedModulesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def selected_module_params
-      params.require(:selected_module).permit(:id, :studentID, :courseModuleID)
+      params.require(:selected_module).permit(:id, :user_id, :course_module_id)
     end
 end

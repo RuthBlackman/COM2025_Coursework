@@ -1,15 +1,15 @@
 %p#notice= notice
 
+-#%p
+-#  %b Id:
+-#  = @selected_module.id
+-#%p
+-#  %b Studentid:
+-#  = @selected_module.studentId
 %p
-  %b Id:
-  = @selected_module.id
-%p
-  %b Studentid:
-  = @selected_module.studentID
-%p
-  %b Coursemoduleid:
-  = @selected_module.courseModuleID
+  %b Tittle:
+  = @selected_module.course_module.Title
 
 = link_to 'Edit', edit_selected_module_path(@selected_module)
 \|
-= link_to 'Back', selected_modules_path
+= link_to 'Back', my_modules_path

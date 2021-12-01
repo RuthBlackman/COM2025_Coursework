@@ -14,8 +14,8 @@
     - @selected_modules.each do |selected_module|
       %tr
         %td= selected_module.id
-        %td= selected_module.studentID
-        %td= selected_module.courseModuleID
+        %td= selected_module.user_id
+        %td= selected_module.course_module_id
         %td= link_to 'Show', selected_module
         %td= link_to 'Edit', edit_selected_module_path(selected_module)
         %td= link_to 'Destroy', selected_module, method: :delete, data: { confirm: 'Are you sure?' }

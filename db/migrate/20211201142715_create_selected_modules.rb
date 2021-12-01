@@ -8,5 +8,8 @@ class CreateSelectedModules < ActiveRecord::Migration[5.2]
       t.references :course_module, foreign_key: true, null: false
     end
 
+    #cannot have a selected module with the same user id and course module id
+    add_index :selected_modules, [:user_id, :course_module_id], unique: true
+
   end
 end

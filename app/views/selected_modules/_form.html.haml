@@ -10,10 +10,13 @@
     = f.label :id
     = f.number_field :id
   .field
-    = f.label :studentID
-    = f.number_field :studentID
+    = f.label :user_id
+    = f.number_field :user_id
   .field
-    = f.label :courseModuleID
-    = f.number_field :courseModuleID
+    = f.hidden_field :course_module_id
+    = @selected_module.course_module.Title
+    = @selected_module.course_module.ModuleCode
+    -#= f.label :course_module
+    -#= f.number_field :course_module_id
   .actions
     = f.submit 'Save'
