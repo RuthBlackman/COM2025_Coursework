@@ -1,4 +1,4 @@
-%p#notice= notice
+//%p#notice= notice
 
 -#%p
 -#  %b Id:
@@ -7,7 +7,7 @@
 -#  %b Studentid:
 -#  = @selected_module.studentId
 %p
-  %b Tittle:
+  %b Module title:
   = @selected_module.course_module.Title
 
 = link_to 'Edit', edit_selected_module_path(@selected_module)

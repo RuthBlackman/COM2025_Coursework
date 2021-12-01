@@ -1,27 +1,39 @@
+.jumbotron.text-center
+  %h1= 'Module Details'
+  %p= 'Here are the details about the selected module.'
+
+.ripple-background
+  .circle.xxlarge.shade1
+  .circle.xlarge.shade2
+  .circle.large.shade3
+  .circle.medium.shade4
+  .circle.small.shade5
+
+
+
 %p#notice= notice
 
-%p
-  %b Title:
-  = @course_module.Title
-%p
-  %b Modulecode:
-  = @course_module.ModuleCode
-%p
-  %b Moduleoverview:
-  = @course_module.ModuleOverview
-%p
-  %b Moduleleader:
-  = @course_module.ModuleLeader
-%p
-  %b Moduleleaderid:
-  = @course_module.ModuleLeaderID
-%p
-  %b Credits:
-  = @course_module.Credits
-%p
-  %b Year:
-  = @course_module.Year
 
-= link_to 'Edit', edit_course_module_path(@course_module)
-\|
-= link_to 'Back', course_modules_path
+.formWrapper
+  %p
+    %b Title:
+    = @course_module.Title
+  %p
+    %b Module Code:
+    = @course_module.ModuleCode
+  %p
+    %b Module Overview:
+    = @course_module.ModuleOverview
+  %p
+    %b Module Leader:
+    = @course_module.ModuleLeader
+  %p
+    %b Credits:
+    = @course_module.Credits
+  %p
+    %b Year:
+    = @course_module.Year
+
+  = link_to 'Edit', edit_course_module_path(@course_module), class:'btn'
+
+  = link_to 'Back', course_modules_path, class:'btn'
