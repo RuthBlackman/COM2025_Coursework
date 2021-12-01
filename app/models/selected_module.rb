@@ -1,2 +1,0 @@
-class SelectedModule < ApplicationRecord
-end

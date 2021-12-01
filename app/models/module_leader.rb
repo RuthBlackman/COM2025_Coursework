@@ -1,2 +1,0 @@
-class ModuleLeader < ApplicationRecord
-end

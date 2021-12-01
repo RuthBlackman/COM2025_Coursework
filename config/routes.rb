@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :module_leaders
-  resources :selected_modules
   devise_for :users
   resources :course_modules
   root 'home#home'
