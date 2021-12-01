@@ -1,0 +1,40 @@
+.jumbotron.text-center
+  %h1= 'Your Modules'
+
+.ripple-background
+  .circle.xxlarge.shade1
+  .circle.xlarge.shade2
+  .circle.large.shade3
+  .circle.medium.shade4
+  .circle.small.shade5
+
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Module Code
+      %th Module Overview
+      %th Module Leader
+      %th Credits
+      %th Year
+      %th
+      %th
+      %th
+
+  %tbody
+    - @course_modules.each do |course_module|
+      %tr
+        %td= course_module.Title
+        %td= course_module.ModuleCode
+        %td= course_module.ModuleOverview
+        %td= course_module.ModuleLeader
+        %td= course_module.Credits
+        %td= course_module.Year
+        %td= link_to 'Show', course_module
+        %td= link_to 'Edit', edit_course_module_path(course_module)
+        %td= link_to 'Destroy', course_module, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Course module', new_course_module_path, class: 'btn'

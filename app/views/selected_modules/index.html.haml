@@ -1,0 +1,25 @@
+%h1 Listing selected_modules
+
+%table
+  %thead
+    %tr
+      %th Id
+      %th Studentid
+      %th Coursemoduleid
+      %th
+      %th
+      %th
+
+  %tbody
+    - @selected_modules.each do |selected_module|
+      %tr
+        %td= selected_module.id
+        %td= selected_module.studentID
+        %td= selected_module.courseModuleID
+        %td= link_to 'Show', selected_module
+        %td= link_to 'Edit', edit_selected_module_path(selected_module)
+        %td= link_to 'Destroy', selected_module, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Selected module', new_selected_module_path

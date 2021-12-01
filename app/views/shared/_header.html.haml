@@ -6,9 +6,9 @@
     %img{:src => "http://localhost:3000/assets/stag.jpg"}
   .header-right
     %a.active{:href => "/"} Home
-    %a{href: "/"} Your modules
+    %a{href: my_modules_path} Your modules
     %a{href: "/course_modules"} All modules
-    %a{href: "contact"} Contact
+    %a{href: "/contact"} Contact
 
   %nav
     - if user_signed_in?

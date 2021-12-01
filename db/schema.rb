@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_190348) do
+ActiveRecord::Schema.define(version: 2021_12_01_142715) do
 
   create_table "course_modules", force: :cascade do |t|
     t.string "Title", null: false
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2021_11_29_190348) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["Title"], name: "index_course_modules_on_title", unique: true
+  end
+
+  create_table "selected_modules", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.integer "course_module_id", null: false
+    t.index ["course_module_id"], name: "index_selected_modules_on_course_module_id"
+    t.index ["user_id"], name: "index_selected_modules_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

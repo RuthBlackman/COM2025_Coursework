@@ -11,6 +11,10 @@ class CourseModulesController < ApplicationController
   def show
   end
 
+  def indexOwn
+    @course_modules = CourseModule.by_user(current_user)
+  end
+
   # GET /course_modules/new
   def new
     @course_module = CourseModule.new

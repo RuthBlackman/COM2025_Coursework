@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :selected_modules
   devise_for :users
   resources :course_modules
+  get 'my_modules' , to: 'course_modules#indexOwn'
   root 'home#home'
   get 'response' , to: 'home#responsive'
   get 'contact' , to: 'home#contact'
