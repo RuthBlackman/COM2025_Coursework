@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Firstname:
+  = @module_leader.firstName
+%p
+  %b Lastname:
+  = @module_leader.lastName
+%p
+  %b Department:
+  = @module_leader.department
+%p
+  %b Office:
+  = @module_leader.office
+%p
+  %b Officehours:
+  = @module_leader.officeHours
+
+= link_to 'Edit', edit_module_leader_path(@module_leader)
+\|
+= link_to 'Back', module_leaders_path

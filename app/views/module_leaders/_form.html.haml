@@ -1,0 +1,25 @@
+= form_for @module_leader do |f|
+  - if @module_leader.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@module_leader.errors.count, "error")} prohibited this module_leader from being saved:"
+      %ul
+        - @module_leader.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :firstName
+    = f.text_field :firstName
+  .field
+    = f.label :lastName
+    = f.text_field :lastName
+  .field
+    = f.label :department
+    = f.text_field :department
+  .field
+    = f.label :office
+    = f.text_field :office
+  .field
+    = f.label :officeHours
+    = f.text_field :officeHours
+  .actions
+    = f.submit 'Save'

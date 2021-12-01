@@ -1,0 +1,2 @@
+class ModuleLeader < ApplicationRecord
+end
