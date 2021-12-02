@@ -1,22 +1,41 @@
-= form_for @selected_module do |f|
-  - if @selected_module.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@selected_module.errors.count, "error")} prohibited this selected_module from being saved:"
-      %ul
-        - @selected_module.errors.full_messages.each do |message|
-          %li= message
+.formWrapper
+  = form_for @selected_module do |f|
+    - if @selected_module.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@selected_module.errors.count, "error")} prohibited this selected_module from being saved:"
+        %ul
+          - @selected_module.errors.full_messages.each do |message|
+            %li= message
 
-  .field
-    = f.label :id
-    = f.number_field :id
-  .field
-    = f.label :user_id
-    = f.number_field :user_id
-  .field
-    = f.hidden_field :course_module_id
-    = @selected_module.course_module.Title
-    = @selected_module.course_module.ModuleCode
-    -#= f.label :course_module
-    -#= f.number_field :course_module_id
-  .actions
-    = f.submit 'Save'
+    .field
+      //= f.label :id
+      //= f.number_field :id
+      = f.hidden_field :id
+    .field
+      //= f.label :user_id
+      //= f.number_field :user_id
+      = f.hidden_field :user_id
+    .field
+      = f.hidden_field :course_module_id
+      %b Title:
+      = @selected_module.course_module.Title
+    .field
+      %b Module Code:
+      = @selected_module.course_module.ModuleCode
+      -#= f.label :course_module
+      -#= f.number_field :course_module_id
+    .field
+      %b Module Overview:
+      = @selected_module.course_module.ModuleOverview
+    .field
+      %b Module Leader:
+      = @selected_module.course_module.ModuleLeader
+    .field
+      %b Module Credits:
+      = @selected_module.course_module.Credits
+    .field
+      %b Module Year:
+      = @selected_module.course_module.Year
+    .actions
+      = f.submit 'Confirm', class:'btn'
+    = link_to 'Cancel', my_modules_path, class:'btn'
