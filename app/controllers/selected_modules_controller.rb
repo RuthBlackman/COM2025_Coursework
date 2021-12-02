@@ -25,6 +25,16 @@ class SelectedModulesController < ApplicationController
   def create
     @selected_module = SelectedModule.new(selected_module_params)
 
+    if current_user.credits == 120
+      respond_to do |format|
+        format.html { redirect_to CourseModule, notice: "Already have 120 creds." }
+        format.json { render json: {
+          message: "Cannot select another modules - already have 120 credits."
+        }, status: :created, location: @selected_module }
+      end
+      return
+    end
+
     respond_to do |format|
       if @selected_module.save
         format.html { redirect_to @selected_module, notice: "Selected module was successfully created." }
