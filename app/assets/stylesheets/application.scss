@@ -20,6 +20,8 @@
 @import "colours";
 //@import "deviseStyles";
 @import "course_modules";
+@import "selected_modules";
+
 
 $font: 'New Times Roman', 'Times', serif;
 $color: #23ccff;
@@ -369,7 +371,4 @@ Alerts when not logged in or sent message
   background-color: rgba(220, 17, 1, 0.33);
   transition:0.5s;
 }
-
-
-
 

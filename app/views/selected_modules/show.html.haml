@@ -1,3 +1,15 @@
+.jumbotron.text-center
+  %h1= 'Success'
+
+.ripple-background
+  .circle.xxlarge.shade1
+  .circle.xlarge.shade2
+  .circle.large.shade3
+  .circle.medium.shade4
+  .circle.small.shade5
+
+
+
 //%p#notice= notice
 
 -#%p
@@ -6,10 +18,18 @@
 -#%p
 -#  %b Studentid:
 -#  = @selected_module.studentId
-%p
-  %b Module title:
-  = @selected_module.course_module.Title
 
-= link_to 'Edit', edit_selected_module_path(@selected_module)
-\|
-= link_to 'Back', my_modules_path
+
+-#%p
+-#  %b Module title:
+-#  = @selected_module.course_module.Title
+-#
+
+%div{class: "outside"}}
+  %div{class: "inside"}}
+    %h2 Module successfully selected!
+
+  %div{ class: "center" }
+    = link_to 'Reload modules', my_modules_path, class:'btn'
+
+
