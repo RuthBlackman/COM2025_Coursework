@@ -29,6 +29,9 @@ class SelectedModulesController < ApplicationController
       if @selected_module.save
         format.html { redirect_to @selected_module, notice: "Selected module was successfully created." }
         format.json { render :show, status: :created, location: @selected_module }
+
+        current_user.credits += @selected_module.course_module.Credits
+        current_user.save
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @selected_module.errors, status: :unprocessable_entity }
@@ -58,6 +61,9 @@ class SelectedModulesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to my_modules_path, notice: "Selected module was successfully destroyed." }
       format.json { head :no_content }
+
+      current_user.credits -= @selected_module.course_module.Credits
+      current_user.save
     end
   end
 
