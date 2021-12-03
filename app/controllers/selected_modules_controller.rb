@@ -1,5 +1,6 @@
 class SelectedModulesController < ApplicationController
   before_action :set_selected_module, only: %i[ show edit update  ]
+  before_action :authenticate_user!
 
   # GET /selected_modules or /selected_modules.json
   def index
@@ -14,7 +15,14 @@ class SelectedModulesController < ApplicationController
   def new
     @selected_module = SelectedModule.new
     @selected_module.user = current_user
-    @selected_module.course_module_id = params[:module_id]
+
+    # TODO: check if course_module is nil and return an error.
+    @selected_module.course_module = CourseModule.find(params[:module_id])
+    if @selected_module.course_module.nil?
+      flash.alert = "Need course module id"
+      redirect_to(my_modules_path, notice: "Need course module id")
+      return
+    end
   end
 
   # GET /selected_modules/1/edit

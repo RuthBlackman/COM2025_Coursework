@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class CourseModulesControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @course_module = course_modules(:one)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do
