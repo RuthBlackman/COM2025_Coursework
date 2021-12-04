@@ -1,24 +1,24 @@
 = render "shared/backgroundAnimation"
 
 .jumbotron.text-center
-  %h2 Log in
+  %h2= t('.title')
 
 
 = form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :id => "login_form", :class => 'login_form'} ) do |f|
   .field
-    = f.label :email
+    = f.label t('.email')
     %br/
     = f.email_field :email, autofocus: true, autocomplete: "email", size: 39,  class: 'name formEntry'
   .field
-    = f.label :password
+    = f.label t('.password')
     %br/
     = f.password_field :password, autocomplete: "current-password", size: 39,  class: 'name formEntry'
   - if devise_mapping.rememberable?
     .field
-      = f.label :remember_me
+      = f.label t('.remember_me')
       = f.check_box :remember_me, class:'formEntry'
   .actions
-    = f.submit "Log in", class:"btn"
+    = f.submit t('.button'), class:"btn"
     %br/
     %br/
     = render "devise/shared/links"

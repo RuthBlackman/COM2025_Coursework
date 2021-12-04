@@ -30,17 +30,22 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app_title: Module Selection
-  app_description: A place where you can select your modules!
+  app_title: "Module Selection"
+  app_description: "A place where you can select your modules!"
 
   home:
     home:
-      title: Module Selection
-      welcome: Welcome to the module selection app!
+      title: "Module Selection"
+      welcome: "Welcome to the module selection app!"
+
+      instruction1: "Click on 'Your modules' to view the modules that you have selected."
+      instruction2: "Click on 'All modules' to view all available modules."
+      instruction3: "If you need any support, send a message in the contact section."
+      instruction4: "Please ensure that you select 8 modules in order to meet the 120 credits requirement."
 
     contact:
-      title: Contact Us
-      contact_us: Complete the following form to get in touch with us.
+      title: "Contact Us"
+      contact_us: "Complete the following form to get in touch with us."
 
       name: "Name:"
       enter_name: "You must enter your name"
@@ -48,9 +53,133 @@ en:
       enter_email: "You must enter your email address"
       message: "Message:"
       enter_message: "You must enter a message"
-      submit: Submit
+      submit: "Submit"
 
     request_contact:
-      no_email: You must supply an email address
-      email_sent: Thank you. We will be in touch shortly.
+      no_email: "You must supply an email address"
+      email_sent: "Thank you. We will be in touch shortly."
 
+
+  course_modules:
+    form:
+      title: "Title"
+      module_code: "Module Code"
+      module_overview: "Module Overview"
+      module_leader: "Module Leader"
+      module_leader_id: "Module Leader ID"
+      credits: "Credits"
+      year: "Year"
+      save_button: "Save"
+
+    edit:
+      title: "Editing Module"
+      show_button: "Show"
+      back_button: "Back"
+
+    index:
+      title: "All Modules"
+      module_code: "Module Code"
+      module_overview: "Module Overview"
+      module_leader: "Module Leader"
+      credits: "Credits"
+      year: "Year"
+      show_button: "Show"
+      select_button: "Select"
+      new_course_module: "New Course Module"
+
+    indexOwn:
+      title: "Your Modules"
+      description: "Here are your selected modules!"
+      module_code: "Module Code"
+      module_overview: "Module Overview"
+      module_leader: "Module Leader"
+      credits: "Credits"
+      year: "Year"
+      show_button: "Show"
+      destroy_button: "Destroy"
+
+    new:
+      title: "New Course Module"
+      back_button: "Back"
+
+    show:
+      title: "Module Details"
+      description: "Here are the details about the selected module."
+      module_code: "Module Code"
+      module_overview: "Module Overview"
+      module_leader: "Module Leader"
+      credits: "Credits"
+      year: "Year"
+      edit_button: "Edit"
+      back_button: "Back"
+
+
+  devise:
+    passwords:
+      new:
+        title: "Forgot your password?"
+        email: "Email"
+        send_instructions: "Send me reset password instructions"
+
+    registrations:
+      edit:
+        can_leave_blank: "(leave blank if you don't want to change it)"
+        need_current_password: "(we need your current password to confirm your changes)"
+        update: "Update"
+        cancel_account: "Cancel my account"
+        back: "Back"
+
+      new:
+        title: "Sign up"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        button: "Sign up"
+
+    sessions:
+      new:
+        title: "Log in"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+        button: "Log in"
+
+
+  selected_modules:
+    form:
+      title: "Title"
+      module_code: "Module Code"
+      module_overview: "Module Overview"
+      module_leader: "Module Leader"
+      module_credits: "Module Credits"
+      module_year: "Module Year"
+      confirm: "Confirm"
+      cancel: "Cancel"
+
+    edit:
+      title: "Editing Selected Module"
+      show: "Show"
+      back: "Back"
+
+    index:
+      title: "Selected Modules"
+      id: "ID"
+      user_id: "User ID"
+      course_module_id: "Course Module ID"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      new_selected_module: "New Selected Module"
+
+    new:
+      title: "Confirmation"
+      description: "Please review that details are correct."
+
+    show:
+      title: "Success"
+      success_message: "Module successfully selected!"
+
+
+  shared:
+    footer:
+      copy_right: "&copy; Ruth Blackman"

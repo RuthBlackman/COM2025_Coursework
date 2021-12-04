@@ -1,7 +1,7 @@
-%h1 Editing selected_module
+%h1=t('.title')
 
 = render 'form'
 
-= link_to 'Show', @selected_module
+= link_to t('.show'), @selected_module
 \|
-= link_to 'Back', selected_modules_path
+= link_to t('.back'), selected_modules_path

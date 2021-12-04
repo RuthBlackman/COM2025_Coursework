@@ -7,25 +7,25 @@
           %li= message
 
   .field
-    = f.label :Title
+    = f.label t('.title')
     = f.text_field :Title, size: 39, class: 'name formEntry'
   .field
-    = f.label :ModuleCode
+    = f.label t('.module_code')
     = f.text_field :ModuleCode, size: 39, class: 'name formEntry'
   .field
-    = f.label :ModuleOverview
+    = f.label t('.module_overview')
     = f.text_field :ModuleOverview, size: 39, class: 'message formEntry'
   .field
-    = f.label :ModuleLeader
+    = f.label t('.module_leader')
     = f.text_field :ModuleLeader, size: 39, class: 'name formEntry'
   .field
-    = f.label :ModuleLeaderID
+    = f.label t('.module_leader_idm')
     = f.number_field :ModuleLeaderID, size: 39, class: 'name formEntry'
   .field
-    = f.label :Credits
+    = f.label t('.credits')
     = f.number_field :Credits, size: 39, class: 'name formEntry'
   .field
-    = f.label :Year
+    = f.label t('.year')
     = f.number_field :Year, size: 39, class: 'name formEntry'
   .actions
-    = f.submit 'Save', class: 'btn'
+    = f.submit t('.save_button'), class: 'btn'

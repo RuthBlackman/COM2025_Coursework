@@ -1,10 +1,10 @@
 = render "shared/backgroundAnimation"
 
 .jumbotron.text-center
-  %h1= "Editing module"
+  %h1= t('.title')
 
 = render 'form'
 
-= link_to 'Show', @course_module, class: 'btn'
+= link_to t('.show_button'), @course_module, class: 'btn'
 \|
-= link_to 'Back', course_modules_path, class: 'btn'
+= link_to t('.back_button'), course_modules_path, class: 'btn'

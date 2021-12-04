@@ -1,11 +1,11 @@
-%h1 Selected Modules
+%h1= t('.title')
 
 %table
   %thead
     %tr
-      %th Id
-      %th Studentid
-      %th Coursemoduleid
+      %th= t('.id')
+      %th= t('.id')
+      %th= t('.course_module_id')
       %th
       %th
       %th
@@ -16,10 +16,10 @@
         %td= selected_module.id
         %td= selected_module.user_id
         %td= selected_module.course_module_id
-        %td= link_to 'Show', selected_module
-        %td= link_to 'Edit', edit_selected_module_path(selected_module)
-        %td= link_to 'Destroy', selected_module, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show'), selected_module
+        %td= link_to  t('.edit'), edit_selected_module_path(selected_module)
+        %td= link_to t('.destroy'), selected_module, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
-= link_to 'New Selected Module', new_selected_module_path
+= link_to t('.new_selected_module'), new_selected_module_path

@@ -1,6 +1,6 @@
 .jumbotron.text-center
-  %h1= 'Your Modules'
-  %p= 'Here are your selected modules!'
+  %h1= t('.title')
+  %p= t('.description')
 
 .ripple-background
   .circle.xxlarge.shade1
@@ -13,12 +13,12 @@
 %table
   %thead
     %tr
-      %th Title
-      %th Module Code
-      %th Module Overview
-      %th Module Leader
-      %th Credits
-      %th Year
+      %th= t('.title')
+      %th= t('.module_code')
+      %th= t('.module_overview')
+      %th= t('.module_leader')
+      %th= t('.credits')
+      %th= t('.year')
       %th
       %th
       %th
@@ -32,9 +32,9 @@
         %td= course_module.ModuleLeader
         %td= course_module.Credits
         %td= course_module.Year
-        %td= link_to 'Show', course_module
+        %td= link_to t('.show_button'), course_module
         //%td= link_to 'Edit', edit_course_module_path(course_module)
-        %td= link_to 'Destroy', selected_module_path(course_module.id), method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.destroy_button'), selected_module_path(course_module.id), method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 

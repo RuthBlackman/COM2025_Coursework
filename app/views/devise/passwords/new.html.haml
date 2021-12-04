@@ -1,14 +1,14 @@
 = render "shared/backgroundAnimation"
 
 .jumbotron.text-center
-  %h2 Forgot your password?
+  %h2= t('.title')
 
 = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, :html => { :id => "forgot_password_form", :class => 'forgot_password_form'}) do |f|
   = render "devise/shared/error_messages", resource: resource
   .field
-    = f.label :email
+    = f.label t('.email')
     = f.email_field :email, autofocus: true, autocomplete: "email", class: 'name formEntry'
   .actions
-    = f.submit "Send me reset password instructions", class: 'btn'
+    = f.submit t('.send_instructions'), class: 'btn'
 
     = render "devise/shared/links"

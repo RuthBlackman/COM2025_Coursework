@@ -20,25 +20,25 @@
     .field
       = f.hidden_field :course_module_id
     .field
-      %b Title:
+      %b= t('.title')
       = @selected_module.course_module.Title
     .field
-      %b Module Code:
+      %b= t('.module_code')
       = @selected_module.course_module.ModuleCode
       -#= f.label :course_module
       -#= f.number_field :course_module_id
     .field
-      %b Module Overview:
+      %b= t('.module_overview')
       = @selected_module.course_module.ModuleOverview
     .field
-      %b Module Leader:
+      %b= t('.module_leader')
       = @selected_module.course_module.ModuleLeader
     .field
-      %b Module Credits:
+      %b= t('.module_credits')
       = @selected_module.course_module.Credits
     .field
-      %b Module Year:
+      %b= t('.module_year')
       = @selected_module.course_module.Year
     .actions
-      = f.submit 'Confirm', class:'btn'
-    = link_to 'Cancel', my_modules_path, class:'btn'
+      = f.submit t('.confirm'), class:'btn'
+    = link_to t('.cancel'), my_modules_path, class:'btn'

@@ -12,12 +12,12 @@
 %table
   %thead
     %tr
-      %th Title
-      %th Module Code
-      %th Module Overview
-      %th Module Leader
-      %th Credits
-      %th Year
+      %th= t('.title')
+      %th= t('.module_code')
+      %th= t('.module_overview')
+      %th= t('.module_leader')
+      %th= t('.credits')
+      %th= t('.year')
       %th
       %th
       //%th
@@ -31,11 +31,11 @@
         %td= course_module.ModuleLeader
         %td= course_module.Credits
         %td= course_module.Year
-        %td= link_to 'Show', course_module
+        %td= link_to t('.show_button'), course_module
         //%td= link_to 'Edit', edit_course_module_path(course_module)
         //%td= link_to 'Destroy', course_module, method: :delete, data: { confirm: 'Are you sure?' }
-        %td= link_to 'Select', new_selected_module_path(:module_id => course_module)
+        %td= link_to t('.select_button'), new_selected_module_path(:module_id => course_module)
 
 %br
 
-= link_to 'New Course module', new_course_module_path, class: 'btn'
+= link_to t('.new_course_module'), new_course_module_path, class: 'btn'

@@ -1,6 +1,6 @@
 .jumbotron.text-center
-  %h1= 'Module Details'
-  %p= 'Here are the details about the selected module.'
+  %h1= t('.title')
+  %p= t('.description')
 
 .ripple-background
   .circle.xxlarge.shade1
@@ -16,24 +16,24 @@
 
 .formWrapper
   %p
-    %b Title:
+    %b= t('.title')
     = @course_module.Title
   %p
-    %b Module Code:
+    %b= t('.module_code')
     = @course_module.ModuleCode
   %p
-    %b Module Overview:
+    %b= t('.module_overview')
     = @course_module.ModuleOverview
   %p
-    %b Module Leader:
+    %b= t('.module_leader')
     = @course_module.ModuleLeader
   %p
-    %b Credits:
+    %b= t('.credits')
     = @course_module.Credits
   %p
-    %b Year:
+    %b= t('.year')
     = @course_module.Year
 
-  = link_to 'Edit', edit_course_module_path(@course_module), class:'btn'
+  = link_to t('.edit_button'), edit_course_module_path(@course_module), class:'btn'
 
-  = link_to 'Back', course_modules_path, class:'btn'
+  = link_to t('.back_button'), course_modules_path, class:'btn'
