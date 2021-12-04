@@ -10,6 +10,11 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_select 'title', 'Module Selection'
     assert_select 'h1', 'Module Selection'
     assert_select 'p', 'Welcome to the module selection app!'
+
+    assert_select 'p', "Click on 'Your modules' to view the modules that you have selected."
+    assert_select 'p', "Click on 'All modules' to view all available modules."
+    assert_select 'p', "If you need any support, send a message in the contact section."
+    assert_select 'p', "Please ensure that you select 8 modules in order to meet the 120 credits requirement."
   end
 
   test "should get contact" do
