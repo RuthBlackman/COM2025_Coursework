@@ -26,6 +26,13 @@
 $font: 'New Times Roman', 'Times', serif;
 $color: #23ccff;
 
+#name-error, #email-error, #message-error{
+  color: #B00100;
+  padding-bottom: 1em;
+
+}
+
+
 /* form animation starts */
 .contact_form, .edit_module_form, .login_form, .signup_form, .forgot_password_form{
   background: #fff;

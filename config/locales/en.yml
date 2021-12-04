@@ -43,11 +43,11 @@ en:
       contact_us: Complete the following form to get in touch with us.
 
       name: "Name:"
-      enter_name: Enter your name
+      enter_name: "You must enter your name"
       email: "Email:"
-      enter_email: Enter your email address
+      enter_email: "You must enter your email address"
       message: "Message:"
-      enter_message: What do you want to say?
+      enter_message: "You must enter a message"
       submit: Submit
 
     request_contact:

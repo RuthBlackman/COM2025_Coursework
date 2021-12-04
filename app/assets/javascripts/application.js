@@ -10,9 +10,49 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require bootstrap-sprockets
+//= //require bootstrap-sprockets
 //= require jquery3
 //= require jquery_ujs
+//= require jquery.validate
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function ValidateSignupForm(){
+    $('#signup_form').validate({
+        rules:{
+            "user[email]": {required: true, email: true},
+            "user[password]": {required: true, minlength: 6},
+            "user[password_confirmation]": {required: true, equalTo: "#user_password"}
+        },
+        message:{
+            'user[email]': {required: "You must enter your email address", email: "You must enter your email address"},
+            'user[password]': {required: "You must enter your password"},
+            'user[password_conformation]': {required: "Passwords don't match"},
+        }
+    });
+}
+
+function ValidateContactUsForm(){
+    $('#contact_form').validate({
+        rules:{
+            'name': {required: true},
+            'email': {required: true, email:true},
+            'message': {required: true}
+        },
+        messages:{
+            'name': {required: "You must enter your name"},
+            'email': {required: "You must enter your email address", email: "You must enter your email address"},
+            'message': {required: "You must enter a message"}
+        }
+    });
+}
+
+
+
+
+$(document).on('turbolinks:load', function() {
+    if(document.getElementById('contact_form')){
+        ValidateContactUsForm();
+    }
+});
