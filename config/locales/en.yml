@@ -32,6 +32,8 @@
 en:
   app_title: "Module Selection"
   app_description: "A place where you can select your modules!"
+  login: "Login"
+  sign_up: "Sign Up"
 
   home:
     home:
