@@ -20,7 +20,6 @@
       %th= t('.year')
       %th
       %th
-      //%th
 
   %tbody
     - @course_modules.each do |course_module|
@@ -32,10 +31,6 @@
         %td= course_module.Credits
         %td= course_module.Year
         %td= link_to t('.show_button'), course_module
-        //%td= link_to 'Edit', edit_course_module_path(course_module)
-        //%td= link_to 'Destroy', course_module, method: :delete, data: { confirm: 'Are you sure?' }
         %td= link_to t('.select_button'), new_selected_module_path(:module_id => course_module)
 
 %br
-
-= link_to t('.new_course_module'), new_course_module_path, class: 'btn'

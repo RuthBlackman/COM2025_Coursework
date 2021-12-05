@@ -2,6 +2,7 @@
   %h1= t('.title')
   %p= t('.description')
 
+
 .ripple-background
   .circle.xxlarge.shade1
   .circle.xlarge.shade2
@@ -33,9 +34,7 @@
         %td= course_module.Credits
         %td= course_module.Year
         %td= link_to t('.show_button'), course_module
-        //%td= link_to 'Edit', edit_course_module_path(course_module)
         %td= link_to t('.destroy_button'), selected_module_path(course_module.id), method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
-//= link_to 'Add a module', new_course_module_path, class: 'btn'

@@ -1,5 +1,5 @@
 class CourseModulesController < ApplicationController
-  before_action :set_course_module, only: %i[ show edit update destroy ]
+  before_action :set_course_module, only: %i[ show edit update destroy   ]
   before_action :authenticate_user!
 
   # GET /course_modules or /course_modules.json
