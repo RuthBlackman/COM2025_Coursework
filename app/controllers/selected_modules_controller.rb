@@ -36,7 +36,7 @@ class SelectedModulesController < ApplicationController
     #if the user already has 120 credits, then they should not be allowed to select another module
     if current_user.credits == 120
       respond_to do |format|
-        format.html { redirect_to CourseModule, notice: "Already have 120 creds." }
+        format.html { redirect_to CourseModule, notice: "Cannot select another module - already have 120 credits." }
         format.json { render json: {
           message: "Cannot select another module - already have 120 credits."
         }, status: :created, location: @selected_module }
@@ -47,7 +47,7 @@ class SelectedModulesController < ApplicationController
     #if the year of the user does not match the year of the module, then they should not be allowed to select that module
     if current_user.year != @selected_module.course_module.Year
       respond_to do |format|
-        format.html { redirect_to CourseModule, notice: "Not the right year" }
+        format.html { redirect_to CourseModule, notice: "Cannot select this module - not in the correct year." }
         format.json { render json: {
           message: "Cannot select this module - not in the correct year."
         }, status: :created, location: @selected_module }
