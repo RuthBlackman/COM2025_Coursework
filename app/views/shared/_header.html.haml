@@ -2,21 +2,22 @@
   = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
 
 .header
-  %a.logo{href: "/"}
+  %a.logo
     %img{:src => "http://localhost:3000/assets/logo.jpg"}
-  .header-right
+  .header-left
     %a.active{:href => "/"} Home
-    %a{href: my_modules_path} Your modules
-    %a{href: "/course_modules"} All modules
+    %a{href: my_modules_path} Your Modules
+    %a{href: "/course_modules"} All Modules
     %a{href: "/contact"} Contact
 
-  %nav
+  .header-right
     - if user_signed_in?
-      = "#{current_user.email} |"
+      = "#{current_user.email} "
       = link_to t('profile'), edit_user_registration_path
-      = '|'
       = link_to t('logout'), destroy_user_session_path, method: 'delete'
     - else
       = link_to t('login'), new_user_session_path
-      = '|'
       = link_to t('sign_up'), new_user_registration_path
+
+  %nav
+
