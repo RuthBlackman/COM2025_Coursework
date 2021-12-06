@@ -4,8 +4,12 @@
   %h1= t('.title')
   %p= t('.description')
 
-
 %table
+  %div{class: "yearCreditsDisplay" }
+    %h2 Your details
+    %h3= "Year: " + (@current_user.year).to_s
+    %h3= "Credits: " + (@current_user.credits).to_s
+
   %thead
     %tr
       %th= t('.title')

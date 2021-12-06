@@ -37,7 +37,18 @@ class SelectedModulesController < ApplicationController
       respond_to do |format|
         format.html { redirect_to CourseModule, notice: "Already have 120 creds." }
         format.json { render json: {
-          message: "Cannot select another modules - already have 120 credits."
+          message: "Cannot select another module - already have 120 credits."
+        }, status: :created, location: @selected_module }
+      end
+      return
+    end
+
+
+    if current_user.year != @selected_module.course_module.Year
+      respond_to do |format|
+        format.html { redirect_to CourseModule, notice: "Not the right year" }
+        format.json { render json: {
+          message: "Cannot select this module - not in the correct year."
         }, status: :created, location: @selected_module }
       end
       return
