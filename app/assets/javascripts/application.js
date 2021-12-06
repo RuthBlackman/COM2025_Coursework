@@ -18,21 +18,9 @@
 //= require turbolinks
 //= require_tree .
 
-function ValidateSignupForm(){
-    $('#signup_form').validate({
-        rules:{
-            "user[email]": {required: true, email: true},
-            "user[password]": {required: true, minlength: 6},
-            "user[password_confirmation]": {required: true, equalTo: "#user_password"}
-        },
-        message:{
-            'user[email]': {required: "You must enter your email address", email: "You must enter your email address"},
-            'user[password]': {required: "You must enter your password"},
-            'user[password_conformation]': {required: "Passwords don't match"},
-        }
-    });
-}
-
+/*
+jQuery to validate the contact form
+ */
 function ValidateContactUsForm(){
     $('#contact_form').validate({
         rules:{
@@ -50,7 +38,10 @@ function ValidateContactUsForm(){
 
 
 
-
+/*
+Reload the JS every time a new page is loaded
+When the page is loaded, check the id to see if the contact page has been loaded
+ */
 $(document).on('turbolinks:load', function() {
     if(document.getElementById('contact_form')){
         ValidateContactUsForm();
