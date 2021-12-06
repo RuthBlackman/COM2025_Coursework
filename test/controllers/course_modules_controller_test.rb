@@ -16,7 +16,8 @@ class CourseModulesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get new" do
     get new_course_module_url
-    assert_response :success
+    #assert_response :success
+    assert_redirected_to course_modules_url
   end
 
   test "should create course_module" do
