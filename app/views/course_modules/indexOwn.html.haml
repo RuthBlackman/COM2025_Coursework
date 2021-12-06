@@ -1,3 +1,5 @@
+/-Page to display a user's selected modules
+
 = render "shared/backgroundAnimation"
 
 .jumbotron.text-center
@@ -5,6 +7,7 @@
   %p= t('.description')
 
 %table
+  /-Display the user's year and credits
   %div{class: "yearCreditsDisplay" }
     %h2 Your details
     %h3= t('.year') + ": " + (@current_user.year).to_s
@@ -31,8 +34,8 @@
         %td= course_module.ModuleLeader
         %td= course_module.Credits
         %td= course_module.Year
-        %td= link_to t('.show_button'), course_module
-        %td= link_to t('.destroy_button'), selected_module_path(course_module.id), method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show_button'), course_module #Allow the user to view details about that module
+        %td= link_to t('.destroy_button'), selected_module_path(course_module.id), method: :delete, data: { confirm: 'Are you sure?' } #Allow the user to remove that module
 
 %br
 

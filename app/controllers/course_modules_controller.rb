@@ -18,7 +18,7 @@ class CourseModulesController < ApplicationController
   # GET /course_modules/new
   def new
     #@course_module = CourseModule.new
-    redirect_to course_modules_url
+    redirect_to course_modules_url #redirect to the page of modules as the user should not be able to edit a module
   end
 
   # GET /course_modules/1/edit

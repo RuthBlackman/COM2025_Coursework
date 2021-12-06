@@ -1,3 +1,5 @@
+/-Page to view all modules
+
 = render "shared/backgroundAnimation"
 
 .jumbotron.text-center
@@ -25,7 +27,7 @@
         %td= course_module.ModuleLeader
         %td= course_module.Credits
         %td= course_module.Year
-        %td= link_to t('.show_button'), course_module
-        %td= link_to t('.select_button'), new_selected_module_path(:module_id => course_module)
+        %td= link_to t('.show_button'), course_module #allow user to view details about the module
+        %td= link_to t('.select_button'), new_selected_module_path(:module_id => course_module) #allow the user to select the module
 
 %br

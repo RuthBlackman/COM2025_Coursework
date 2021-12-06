@@ -10,6 +10,7 @@ class HomeController < ApplicationController
 
   end
 
+  #validate the contact form
   def request_contact
     name = params[:name]
     email = params[:email]

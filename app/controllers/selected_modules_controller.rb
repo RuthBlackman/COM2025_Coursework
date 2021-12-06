@@ -33,6 +33,7 @@ class SelectedModulesController < ApplicationController
   def create
     @selected_module = SelectedModule.new(selected_module_params)
 
+    #if the user already has 120 credits, then they should not be allowed to select another module
     if current_user.credits == 120
       respond_to do |format|
         format.html { redirect_to CourseModule, notice: "Already have 120 creds." }
@@ -43,7 +44,7 @@ class SelectedModulesController < ApplicationController
       return
     end
 
-
+    #if the year of the user does not match the year of the module, then they should not be allowed to select that module
     if current_user.year != @selected_module.course_module.Year
       respond_to do |format|
         format.html { redirect_to CourseModule, notice: "Not the right year" }
@@ -54,11 +55,13 @@ class SelectedModulesController < ApplicationController
       return
     end
 
+    #if they don't already have 120 credits and they are in the right year, then continue with selecting the module
     respond_to do |format|
       if @selected_module.save
         format.html { redirect_to @selected_module, notice: "Selected module was successfully created." }
         format.json { render :show, status: :created, location: @selected_module }
 
+        #add the module credits to the user's credits
         current_user.credits += @selected_module.course_module.Credits
         current_user.save
       else
@@ -91,6 +94,7 @@ class SelectedModulesController < ApplicationController
       format.html { redirect_to my_modules_path, notice: "Selected module was successfully destroyed." }
       format.json { head :no_content }
 
+      #subtract the module credits from the user's credits
       current_user.credits -= @selected_module.course_module.Credits
       current_user.save
     end
