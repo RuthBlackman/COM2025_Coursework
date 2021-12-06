@@ -80,6 +80,7 @@ en:
 
     index:
       title: "All Modules"
+      module_title: "Module Title"
       module_code: "Module Code"
       module_overview: "Module Overview"
       module_leader: "Module Leader"
@@ -91,6 +92,7 @@ en:
 
     indexOwn:
       title: "Your Modules"
+      module_title: "Module Title"
       description: "Here are your selected modules!"
       module_code: "Module Code"
       module_overview: "Module Overview"
@@ -149,7 +151,7 @@ en:
 
   selected_modules:
     form:
-      title: "Title"
+      title: "Module Title"
       module_code: "Module Code"
       module_overview: "Module Overview"
       module_leader: "Module Leader"

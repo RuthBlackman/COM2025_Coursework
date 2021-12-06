@@ -7,12 +7,12 @@
 %table
   %div{class: "yearCreditsDisplay" }
     %h2 Your details
-    %h3= "Year: " + (@current_user.year).to_s
-    %h3= "Credits: " + (@current_user.credits).to_s
+    %h3= t('.year') + ": " + (@current_user.year).to_s
+    %h3= t('.credits') + ": " + (@current_user.credits).to_s
 
   %thead
     %tr
-      %th= t('.title')
+      %th= t('.module_title')
       %th= t('.module_code')
       %th= t('.module_overview')
       %th= t('.module_leader')
