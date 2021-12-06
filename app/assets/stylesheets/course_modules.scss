@@ -17,7 +17,11 @@
 .login_form{
   .btn{
     margin: auto;
-    padding: 0;
+    position: relative;
+    display:block;
+    text-align: center;
+
+    width: 50%;
   }
 }
 .btn:hover {
